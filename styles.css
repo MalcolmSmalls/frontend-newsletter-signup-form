@@ -16,6 +16,8 @@ img {
   display: block;
 }
 
+/* Layout */
+
 main {
   background-color: white;
   display: grid;
@@ -27,6 +29,34 @@ main * {
   grid-column: 2;
 }
 
+.main-success-card {
+  display: grid;
+  grid-template-rows: 8em auto 1fr auto;
+  height: 100vh;
+}
+
+.main-success-card * {
+  align-self: end;
+}
+
+.main-success-title {
+  align-self: start;
+}
+
+.main-success-paragraph {
+  align-self: start;
+  height: 100%;
+}
+
+.main-form-card {
+  display: none;
+}
+
+.main-title {
+  grid-row: 2;
+}
+
+/* Typography */
 h1,
 h2,
 p,
@@ -41,13 +71,15 @@ label {
   font-weight: 700;
 }
 
-h1 {
+h1,
+h2 {
   margin: 0.4em 0;
   font-size: 3rem;
 }
 
-.btn {
-  background-color: hsl(234, 29%, 20%);
+h2 {
+  line-height: 1;
+  margin: 0.9em 0;
 }
 
 p {
@@ -66,9 +98,26 @@ ul {
 li {
   margin: 1em 0;
 }
-.main-success-card {
-  display: none;
+
+.btn {
+  border-radius: 10px;
+  margin-bottom: 2em;
+  color: white;
+  font-weight: 700;
+  padding: 1.2em 1em;
+  font-size: 1.1em;
 }
+
+a {
+  text-decoration: none;
+}
+/* Buttons */
+.btn {
+  background-color: hsl(234, 29%, 20%);
+  text-align: center;
+}
+
+/* Other Elements */
 
 .main-image {
   grid-column: 1 / -1;
@@ -78,10 +127,6 @@ li {
   object-fit: cover;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-
-.main-title {
-  grid-row: 2;
 }
 
 .checkmark-icon {
@@ -103,13 +148,4 @@ li {
 .email-label {
   display: block;
   margin: 2em 0 0.6em;
-}
-
-.btn {
-  border-radius: 10px;
-  margin-bottom: 2em;
-  color: white;
-  font-weight: 700;
-  padding: 1.2em 1em;
-  font-size: 1.1em;
 }
