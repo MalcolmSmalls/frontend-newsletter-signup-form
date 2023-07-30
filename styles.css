@@ -1,6 +1,8 @@
 body {
   margin: 0;
   background-color: #1f1f1f;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -10,4 +12,22 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+main {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 3em 1fr 3em;
+}
+
+main * {
+  grid-column: 2;
+}
+
+.main-success-card {
+  display: none;
+}
+
+.main-image {
+  grid-row: 1;
 }
