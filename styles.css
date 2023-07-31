@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #1f1f1f;
+  background-color: hsl(235, 18%, 26%);
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
@@ -30,7 +30,7 @@ main * {
 }
 
 .main-success-card {
-  display: grid;
+  display: none;
   grid-template-rows: 8em auto 1fr auto;
   height: 100vh;
 }
@@ -49,11 +49,19 @@ main * {
 }
 
 .main-form-card {
-  display: none;
+  display: grid;
 }
 
 .main-title {
   grid-row: 2;
+}
+
+@media (min-width: 1440px) {
+  main {
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: 3em 1fr 1fr 3em;
+  }
 }
 
 /* Typography */
@@ -99,6 +107,11 @@ li {
   margin: 1em 0;
 }
 
+a {
+  text-decoration: none;
+}
+/* Buttons */
+
 .btn {
   border-radius: 10px;
   margin-bottom: 2em;
@@ -106,15 +119,14 @@ li {
   font-weight: 700;
   padding: 1.2em 1em;
   font-size: 1.1em;
-}
-
-a {
-  text-decoration: none;
-}
-/* Buttons */
-.btn {
   background-color: hsl(234, 29%, 20%);
   text-align: center;
+  border: none;
+}
+
+.btn:hover {
+  background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
 }
 
 /* Other Elements */
@@ -148,4 +160,21 @@ a {
 .email-label {
   display: block;
   margin: 2em 0 0.6em;
+}
+
+@media (min-width: 1440px) {
+  .main-image {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+  }
+  .main-paragraph {
+    grid-row: 3;
+  }
+  .main-list {
+    grid-row: 4;
+  }
+
+  .main-form {
+    grid-row: 5;
+  }
 }
