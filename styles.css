@@ -30,7 +30,8 @@ main * {
 }
 
 .main-success-card {
-  display: none;
+  /* display: none; */
+  display: grid;
   grid-template-rows: 8em auto 1fr auto;
   height: 100vh;
 }
@@ -49,7 +50,8 @@ main * {
 }
 
 .main-form-card {
-  display: grid;
+  display: none;
+  /* display: grid; */
 }
 
 .main-title {
@@ -122,6 +124,7 @@ a {
   background-color: hsl(234, 29%, 20%);
   text-align: center;
   border: none;
+  width: 100%;
 }
 
 .btn:hover {
